@@ -1,0 +1,73 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .cell {
+    background-color: #fff;
+    border: 2px solid #444;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cell:hover:not(.taken) {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+  
+  .cell.taken {
+    pointer-events: none;
+  }
+  
+  .cell.win {
+    background-color: #c4f0c5;
+    color: #0c8346;
+  }
+  
+  .message {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    min-height: 2em;
+  }
+  
+  button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #a30080;
+  }
+  
